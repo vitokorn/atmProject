@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    | {{ album.title }}
+{% endblock %}
+{% block content %}
+    <div class="mb-3">
+        <label for="total_sum" class="form-label">Сумма которую вы хотите снять</label>
+        <input type="text" class="form-control" id="total_sum" placeholder="Введите сумму">
+    </div>
+    <div class="mb-3">
+        <label for="issued_banknotes" class="form-label">Выданные деньги</label>
+        <input type="text" class="form-control" id="issued_banknotes" placeholder="0" disabled>
+    </div>
+    <button type="button" onclick="getCash()" class="btn btn-primary">Выдать деньги</button>
+{% endblock %}
